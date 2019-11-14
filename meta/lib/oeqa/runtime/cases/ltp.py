@@ -35,7 +35,7 @@ class LtpTest(LtpTestBase):
     def test_ltp_groups(self):
         for ltp_group in self.ltp_groups: 
             self.cmd = '/opt/ltp/runltp -f %s -p -q -r /opt/ltp -l /opt/ltp/results/%s -I 1 -d /opt/ltp' % (ltp_group, ltp_group)
-            self.runltp(ltp_group, 'ltpresult')
+            self.runltp(ltp_group)
 
     @OETestDepends(['ltp.LtpTest.test_ltp_groups'])
     def test_ltp_runltp_cve(self):
